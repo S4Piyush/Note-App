@@ -21,7 +21,7 @@ function Addtonote() {
 
   const handelsubmit = () => {
     // console.log("data")
-    dispatch(addtocardActions({ ...All, color:randem}))
+    dispatch(addtocardActions({ ...All,}))
   }
   return (
     <div>

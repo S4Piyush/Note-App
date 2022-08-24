@@ -36,7 +36,7 @@ function Note() {
                 <div className='row'>
                     {
                         getdata.map((data) =>
-                            <div className="col-lg-4 mt-5" >
+                            <div className="col-lg-4 mt-5 " >
                                 <div className='card-border'>
                                     <form>
                                         <div>
@@ -44,6 +44,7 @@ function Note() {
                                                 placeholder='Title'
                                                 className='input input-text'
                                                 name='Title'
+                                                
                                             />
                                         </div>
                                         <div>
