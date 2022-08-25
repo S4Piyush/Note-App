@@ -19,7 +19,6 @@ function Addtonote() {
 
   const handelsubmit = (e) => {
     e.preventDefault()
-    // console.log("data")
     dispatch(addtocardActions({ ...All,id:uuidv4(),color:randem }))
   }
   return (
