@@ -19,16 +19,17 @@ export const addtonotereducer = (state = initialstate, action) => {
             }
         }
         case UPDATED_TITLE:{
-            const data = state.note.filter((data) => data?.id === action.payload)
+            
             return {
                 ...state,
-                note:data
+                note: action.payload
                   
             }
         }
         case UPDATED_DESCRIPTION:{
             return{
                 ...state,
+                note:action.payload
             }
         }
         default: {
