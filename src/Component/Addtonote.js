@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react"
 import { addtocardActions } from "../Actions/Actions"
 import { v4 as uuidv4 } from 'uuid';
+import { IoAdd } from "react-icons/io5";
 
 
 function Addtonote() {
@@ -20,13 +21,14 @@ function Addtonote() {
   const handelsubmit = (e) => {
     e.preventDefault()
     dispatch(addtocardActions({ ...All,id:uuidv4(),color:randem }))
+    
   }
   return (
     <div>
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <button className='button' onClick={(e) => handelsubmit(e)}>Add New Note</button>
+            <button className='button' onClick={(e) => handelsubmit(e)}><IoAdd/></button>
           </div>
         </div>
       </div>

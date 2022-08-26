@@ -1,4 +1,4 @@
-import { ADD_TO_NOTE, DELETE_DATA, UPDATED_DESCRIPTION, UPDATED_TITLE } from "../Reducer/Constent";
+import { ADD_TO_NOTE, CLEAR_ALL_CARED, DELETE_DATA, UPDATED_DESCRIPTION, UPDATED_TITLE } from "../Reducer/Constent";
 
 export const addtocardActions = (data) => {
     return (
@@ -17,7 +17,7 @@ export const deletedataActions = (data) => {
    )
 }
 export const TitleupdatedActions = (data) => {
-    console.log(data)
+  
     return (
         {
             type: UPDATED_TITLE,
@@ -33,4 +33,5 @@ export const discriptionupdatedActions = (data) => {
         }
     )
 }
+
 

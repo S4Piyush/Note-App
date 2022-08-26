@@ -1,4 +1,4 @@
-import { ADD_TO_NOTE, UPDATED_TITLE,DELETE_DATA,UPDATED_DESCRIPTION } from "./Constent";
+import { ADD_TO_NOTE, UPDATED_TITLE,DELETE_DATA,UPDATED_DESCRIPTION, CLEAR_ALL_CARED } from "./Constent";
 
 const initialstate = {
     note:[]
@@ -8,11 +8,11 @@ export const addtonotereducer = (state = initialstate, action) => {
         case ADD_TO_NOTE: {
             return {
                 ...state,
-                note: [...state.note, action.payload]
+                note: [...state.note,action.payload]
             }
         }
         case DELETE_DATA: {
-            const data = state.note.filter((data) => data?.id !== action.payload)
+            const data = state.note.filter((data) => data.id !== action.payload)
             return {
                 ...state,
                 note:data 
@@ -32,6 +32,7 @@ export const addtonotereducer = (state = initialstate, action) => {
                 note:action.payload
             }
         }
+
         default: {
             return state
         }
